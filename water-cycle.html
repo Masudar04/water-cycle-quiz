@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Cycle Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1E90FF; /* Blue background for the whole page */
+            color: #000000; /* Black text for contrast */
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff; /* White background for the content */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            margin: auto;
+            color: #000; /* Black text for the main content */
+        }
+        h1, h2, h3 {
+            color: #1E90FF; /* Blue color for headers */
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .quiz-container {
+            margin-top: 20px;
+            background-color: #1E90FF; /* Blue background for the quiz section */
+            color: #ffffff; /* White text */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        button {
+            background-color: #228B22;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .positive-feedback {
+            color: green;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .negative-feedback {
+            color: red;
+            font-size: 18px;
+        }
+        .explanation {
+            font-size: 16px;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>The Water Cycle</h1>
+        <p>The water cycle, also known as the hydrological cycle, is a continuous movement of water on, above, and below the surface of the Earth. It is referenced in the Bible, as God speaks of water's role in sustaining life and maintaining the Earth.</p>
+        
+        <h2>Scientific Explanation of the Water Cycle</h2>
+        <p>The water cycle consists of several key processes that work together to maintain the flow of water on Earth. These processes are: Evaporation, Condensation, Precipitation, Runoff, Infiltration, and Transpiration. Here are their explanations:</p>
+
+        <h3>1. Evaporation</h3>
+        <p>Evaporation occurs when water from bodies of water (lakes, oceans, etc.) is heated by the sun and turns into water vapor, rising into the atmosphere.</p>
+        <p><strong>Bible Reference:</strong> Ecclesiastes 1:7 - "All the rivers run into the sea, yet the sea is not full; unto the place from whence the rivers come, thither they return again."</p>
+
+        <h3>2. Condensation</h3>
+        <p>As water vapor rises, it cools and condenses into tiny droplets that form clouds. This process helps the Earth regulate temperature and creates precipitation.</p>
+        <p><strong>Bible Reference:</strong> Job 36:27-28 - "For he draws up the drops of water, which distill as rain from the mist." </p>
+
+        <h3>3. Precipitation</h3>
+        <p>Precipitation occurs when the condensed water in clouds becomes heavy enough to fall back to Earth as rain, snow, sleet, or hail.</p>
+        <p><strong>Bible Reference:</strong> Psalm 104:13 - "He waters the hills from His upper chambers; the earth is satisfied by the fruit of Your works." </p>
+
+        <h3>4. Runoff</h3>
+        <p>Runoff occurs when water flows over the Earth's surface and eventually returns to oceans, rivers, and lakes.</p>
+        <p><strong>Bible Reference:</strong> Isaiah 55:10 - "As the rain and the snow come down from heaven, and do not return to it without watering the earth, and making it bud and flourish..." </p>
+
+        <h3>5. Infiltration</h3>
+        <p>Some of the precipitation soaks into the ground and replenishes groundwater supplies, helping to sustain plant life.</p>
+        <p><strong>Bible Reference:</strong> Genesis 2:6 - "But there went up a mist from the earth, and watered the whole face of the ground." </p>
+
+        <h3>6. Transpiration</h3>
+        <p>Transpiration is the release of water vapor from plants into the atmosphere, contributing to the water cycle.</p>
+        <p><strong>Bible Reference:</strong> Psalm 65:9 - "You visit the earth and water it; You greatly enrich it. The river of God is full of water..." </p>
+
+        <div class="quiz-container">
+            <h2>Water Cycle Quiz</h2>
+            <form id="quizForm">
+                <div id="question1">
+                    <p>1. What is the process of water turning into vapor?</p>
+                    <input type="radio" name="q1" value="a"> a) Condensation<br>
+                    <input type="radio" name="q1" value="b"> b) Precipitation<br>
+                    <input type="radio" name="q1" value="c"> c) Evaporation<br>
+                    <input type="radio" name="q1" value="d"> d) Runoff<br>
+                    <button type="button" onclick="nextQuestion(1)">Next</button>
+                </div>
+                
+                <div id="question2" style="display:none;">
+                    <p>2. What process turns water vapor into liquid?</p>
+                    <input type="radio" name="q2" value="a"> a) Condensation<br>
+                    <input type="radio" name="q2" value="b"> b) Evaporation<br>
+                    <input type="radio" name="q2" value="c"> c) Infiltration<br>
+                    <input type="radio" name="q2" value="d"> d) Transpiration<br>
+                    <button type="button" onclick="nextQuestion(2)">Next</button>
+                </div>
+
+                <div id="question3" style="display:none;">
+                    <p>3. What is the main source of energy for the water cycle?</p>
+                    <input type="radio" name="q3" value="a"> a) The Moon<br>
+                    <input type="radio" name="q3" value="b"> b) The Sun<br>
+                    <input type="radio" name="q3" value="c"> c) The Wind<br>
+                    <input type="radio" name="q3" value="d"> d) The Earth's Core<br>
+                    <button type="button" onclick="nextQuestion(3)">Next</button>
+                </div>
+
+                <div id="question4" style="display:none;">
+                    <p>4. What process happens when water falls back to Earth?</p>
+                    <input type="radio" name="q4" value="a"> a) Evaporation<br>
+                    <input type="radio" name="q4" value="b"> b) Precipitation<br>
+                    <input type="radio" name="q4" value="c") c) Runoff<br>
+                    <input type="radio" name="q4" value="d") d) Transpiration<br>
+                    <button type="button" onclick="nextQuestion(4)">Next</button>
+                </div>
+
+                <div id="question5" style="display:none;">
+                    <p>5. What is the process of water soaking into the ground?</p>
+                    <input type="radio" name="q5" value="a"> a) Infiltration<br>
+                    <input type="radio" name="q5" value="b"> b) Condensation<br>
+                    <input type="radio" name="q5" value="c"> c) Evaporation<br>
+                    <input type="radio" name="q5" value="d") d) Precipitation<br>
+                    <button type="button" onclick="nextQuestion(5)">Next</button>
+                </div>
+                
+            </form>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script>
+        let score = 0;
+
+        function nextQuestion(questionNumber) {
+            const question = document.querySelector(`input[name="q${questionNumber}"]:checked`);
+            if (question) {
+                if (checkAnswer(question.name, question.value)) {
+                    score++;
+                    document.getElementById("result").innerHTML = `<p class="positive-feedback">Congratulations! Your answer is correct.</p>`;
+                } else {
+                    document.getElementById("result").innerHTML = `<p class="negative-feedback">Oops! The correct answer is ${getCorrectAnswer(question.name)}.</p>`;
+                }
+            } else {
+                document.getElementById("result").innerHTML = `<p class="negative-feedback">Please select an answer.</p>`;
+                return;
+            }
+            setTimeout(function() {
+                document.getElementById(`question${questionNumber}`).style.display = 'none';
+                if (questionNumber < 5) {
+                    document.getElementById(`question${questionNumber + 1}`).style.display = 'block';
+                } else {
+                    document.getElementById("result").innerHTML += `<p>Your final score: ${score} out of 5</p>`;
+                }
+            }, 1000);
+        }
+
+        function checkAnswer(questionName, selectedValue) {
+            const correctAnswers = {
+                q1: 'c',
+                q2: 'a',
+                q3: 'b',
+                q4: 'b',
+                q5: 'a',
+            };
+            return correctAnswers[questionName] === selectedValue;
+        }
+
+        function getCorrectAnswer(questionName) {
+            const correctAnswers = {
+                q1: 'c) Evaporation',
+                q2: 'a) Condensation',
+                q3: 'b) The Sun',
+                q4: 'b) Precipitation',
+                q5: 'a) Infiltration',
+            };
+            return correctAnswers[questionName];
+        }
+    </script>
+</body>
+</html>
